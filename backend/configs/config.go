@@ -14,10 +14,14 @@ func LoadConfig(stage string, key string) any {
 	err := godotenv.Load(filePath)
 
 	if err != nil {
-		log.Fatalf("Erro: %v", err)
+		log.Fatalf("Error: %v", err)
 	}
 
 	configValue := os.Getenv(key)
+	if key == "JWT_SECRET_KEY" {
+
+		return []byte(configValue)
+	}
 
 	return configValue
 }

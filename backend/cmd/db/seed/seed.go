@@ -1,6 +1,8 @@
 package seed
 
 import (
+	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/bio"
+	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/content"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/role"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/user"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/configs/database"
@@ -20,6 +22,8 @@ var Seed = &cobra.Command{
 
 		role.RoleSeeder(&db)
 		user.UserSeeder(&db)
+		bio.BioSeeder(&db)
+		content.ContentSeeder(&db)
 
 		utils.SuccessCLIMessage("Seeding succeed!")
 	},

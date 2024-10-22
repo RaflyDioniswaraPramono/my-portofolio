@@ -1,0 +1,22 @@
+[
+  {
+    "content_text": "Dashboard",
+    "link_path": "/dashboard"
+  },
+  {
+    "content_text": "Biography",
+    "link_path": "/dashboard/biography"
+  },
+  {
+    "content_text": "Portofolio",
+    "link_path": "/dashboard/portofolio"
+  },
+  {
+    "content_text": "Experience",
+    "link_path": "/dashboard/experience"
+  },
+  {
+    "content_text": "Sosmed",
+    "link_path": "/dashboard/sosmed"
+  }
+]

@@ -20,6 +20,10 @@ func UserSeeder(db *gorm.DB) {
 	}
 
 	for _, user := range users {
+		encryptedPassword := helper.EncryptPassword([]byte(user.Password))
+
+		user.Password = string(encryptedPassword)
+
 		db.FirstOrCreate(&user, User{Username: user.Username, Email: user.Email})
 	}
 }

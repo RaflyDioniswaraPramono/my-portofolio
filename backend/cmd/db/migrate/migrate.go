@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/bio"
+	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/content"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/experience"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/portofolio"
 	"github.com/RaflyDioniswaraPramono/my-portofolio/api/http/role"
@@ -32,6 +33,7 @@ var Migrate = &cobra.Command{
 			&experience.Experience{},
 			&bio.Bio{},
 			&sosmed.Sosmed{},
+			&content.Content{},
 		}
 
 		err := app.RunMigrations(&db, models)
@@ -61,6 +63,7 @@ var UndoMigrate = &cobra.Command{
 			&experience.Experience{},
 			&bio.Bio{},
 			&sosmed.Sosmed{},
+			&content.Content{},
 		}
 
 		err := app.RunUndoMigrations(&db, models)
